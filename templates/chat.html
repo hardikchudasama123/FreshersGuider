@@ -1,0 +1,63 @@
+{% extends 'main.html' %}
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<h1>Welcome to {{ title }} Page</h1>
+
+<div class="container">
+
+
+    <!-- ✅ Chat History with Scroll -->
+    <div class="chat-container mt-4" style="height: 650px; overflow-y: auto; display: flex; flex-direction: column-reverse;">
+        {% for chat in chat_history %}
+        <div class="chat-message">
+            <p><strong><img src="{{ url_for('static', filename='images/man.png') }}" class="rounded-circle mb-3 profile-pic"></strong> {{ chat.user_message }}</p>
+            <p class="justify-content-start"><strong><i class="bi bi-reddit"></i></strong> {{ chat.ai_response }}</p>
+            <hr>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- {% if response %}
+    
+    <div class="row mt-3">
+        <div class="col-md-12">
+            <div class="alert alert-info">
+                <strong>Response:</strong> {{ response }}
+            </div>
+        </div>
+    </div>
+    {% endif %} -->
+
+
+    <!-- <form method="POST" >
+        <div class="row mt-5">
+            <div class="col-md-9">
+                <input placeholder="Ask any question." type="text" class="form-control" name="query" required>
+            </div>
+            <div class="col-md-3">
+                <button type="submit" class="btn btn-primary">Send</button>
+            </div>
+        </div>
+    </form> -->
+
+
+    <form method="POST" >
+       
+            <div class="sendbox">
+                <div class="c1" style="float: left; width: 89%;">
+                    <input placeholder="Ask any question." type="text" class="form-control" name="query" required>
+
+                </div>
+                <div class="c2" style="float: right; width: 10%;">
+                    <button type="submit" class="btn btn-primary">Send</button>
+
+                </div>
+            
+            </div>
+
+          
+        
+    </form>
+</div>
+{% endblock %}

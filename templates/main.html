@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ApnaVision</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    
+    <style>
+        body {
+            display: flex;
+        }
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            background: #f8f9fa;
+            padding: 1rem;
+            position: fixed;
+        }
+        .content {
+            margin-left: 250px;
+            padding: 2rem;
+            width: 100%;
+        }
+        .sidebar .nav-link {
+            color: black;
+        }
+        .sidebar .nav-link.active {
+            background-color: #0d6efd;
+            color: white;
+            border-radius: 5px;
+        }
+        .profile-section {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            width: 230px;
+        }
+        .profile-pic {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h5 class="d-flex align-items-center mb-3">
+            <i class="bi bi-activity fs-4 me-2"></i> ApnaVision
+        </h5>
+
+        <hr>
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link {% if request.path == '/dashboard' %}active{% endif %}" href="{{ url_for('dashboard') }}">
+                    <i class="bi bi-house-door me-2"></i> Home
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {% if request.path == '/courses' %}active{% endif %}" href="{{ url_for('courses') }}">
+                    <i class="bi bi-box-seam me-2"></i> Courses
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {% if request.path == '/chat' %}active{% endif %}" href="{{ url_for('chat') }}">
+                    <i class="bi bi-chat-right-dots me-2"></i> Chat
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {% if request.path == '/resources' %}active{% endif %}" href="{{ url_for('resources') }}">
+                    <i class="bi bi-book me-2"></i> Resources
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {% if request.path == '/profile' %}active{% endif %}" href="{{ url_for('user_profile') }}">
+                    <i class="bi bi-person me-2"></i> Profile
+                </a>
+            </li>
+        </ul>
+        
+        <hr>
+        <div class="profile-section d-flex align-items-center">
+            <a href="{{ url_for('user_profile') }}" class="d-flex align-items-center text-decoration-none text-dark">
+                <img src="{{ url_for('static', filename='images/man.png') }}" class="rounded-circle me-2 profile-pic">
+                <span>{{ session['username'] }}</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>  
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

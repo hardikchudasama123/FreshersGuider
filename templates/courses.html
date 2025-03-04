@@ -1,0 +1,155 @@
+{% extends 'main.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<div class="container mt-2">
+    <h2>Learn Programing</h2>
+    <div class="row mt-3">
+        <div class="col-md-4">
+            <div class="card" style="width: 24rem;">
+                <img src="{{ url_for('static', filename='images/python_harry.jpg') }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Python Basics</h5>
+                  <p class="card-text">This comprehensive Python Full Course is perfect for beginners who want to master Python from scratch. Covering all essential concepts, this tutorial walks you through variables, data types, loops, functions, OOP, file handling, and more in a structured manner.</p>
+                  <a href="https://youtu.be/UrsmFxEIp5k?si=ae1AwzZFfES1fsmG" class="btn btn-primary">watch now</a>
+                </div>
+              </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card" style="width: 24rem;">
+                <img src="{{ url_for('static', filename='images/flask.jpg') }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Web Dev using Flask</h5>
+                  <p class="card-text">Want to learn Python fast? This 1-hour Python crash course is designed for absolute beginners who want to grasp the fundamentals quickly. You'll learn how to write Python code, understand key concepts, and start building simple programs right away!</p>
+                  <a href="https://youtu.be/Qr4QMBUPxWo?si=CPaoSw-afIBoiu90" class="btn btn-primary">watch now</a>
+                </div>
+              </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card" style="width: 24rem;">
+                <img src="{{ url_for('static', filename='images/ml.jpg') }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Machine Learning</h5>
+                  <p class="card-text">Get started with machine learning and understand key concepts like supervised and unsupervised learning, model training, and evaluation. This course provides a hands-on approach to building ML models, making complex topics easy to grasp for beginners.</p>
+                  <a href="https://youtu.be/rHux0gMZ3Eg?si=x3-6yqYZZrSO1Ofg" class="btn btn-primary">watch now</a>
+                </div>
+              </div>
+        </div>
+        
+    </div>
+</div>
+
+<div class="container mt-2">
+    <h2>Learn Freelancing</h2>
+    <div class="row mt-3">
+        <div class="col-md-4">
+            <div class="card" style="width: 24rem;">
+                <img src="{{ url_for('static', filename='images/gdx.jpg') }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Video Editing</h5>
+                  <p class="card-text">Want to learn video editing fast? This beginner-friendly tutorial covers the essential tools and techniques to edit professional-quality videos. Whether you're creating content for YouTube, social media, or personal projects, this guide will help you cut, trim, add effects, and enhance your videos effortlessly!</p>
+                  <a href="https://youtu.be/h6eeDgBjZq8?si=NkeML9xiuwOC7rgS" class="btn btn-primary">watch now</a>
+                </div>
+              </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card" style="width: 24rem;">
+                <img src="{{ url_for('static', filename='images/canva.jpg') }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Graphic Design</h5>
+                  <p class="card-text">Want to create stunning designs without any experience? This Canva tutorial for beginners covers everything you need to know in just 1 hour! Learn how to design logos, social media posts, presentations, and more with easy drag-and-drop tools. Perfect for students, freelancers, and business owners!</p>
+                  <a href="https://youtu.be/OWEzB8fGZ7g?si=QjVCmucxTs1bzKeZ" class="btn btn-primary">watch now</a>
+                </div>
+              </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card" style="width: 24rem;">
+                <img src="{{ url_for('static', filename='images/fbads.jpg') }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Facebook Ads</h5>
+                  <p class="card-text">Want to master Facebook Ads fast?This beginner-friendly guide walks you through the essential strategies to create high-performing ads, target the right audience, and maximize your ROI. Whether you're growing a business or promoting content, learn how to run effective Facebook ad campaigns with ease!</p>
+                  <a href="https://youtu.be/-4c8L8z__ss?si=ZyQm3cbBlueLthB2" class="btn btn-primary">watch now</a>
+                </div>
+              </div>
+        </div>
+        
+    </div>
+</div>
+
+<div class="container mt-2">
+    <h2>Learn Softskills</h2>
+    <div class="row mt-3">
+        <div class="col-md-4">
+            <div class="card" style="width: 24rem;">
+                <img src="{{ url_for('static', filename='images/cmn.jpg') }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Master Communication</h5>
+                  <p class="card-text">Develop strong communication skills to express your thoughts clearly and confidently. This course covers essential techniques for effective speaking, active listening, and persuasive communication to help you excel in personal and professional interactions.</p>
+                  <a href="https://youtu.be/mGNLe5mal5Q?si=2k65l9zxBt1vY6hK" class="btn btn-primary">watch now</a>
+                </div>
+              </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card" style="width: 24rem;">
+                <img src="{{ url_for('static', filename='images/eng.jpg') }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Speak in English</h5>
+                  <p class="card-text">Boost your English-speaking skills with practical tips and exercises. This course focuses on improving pronunciation, fluency, and vocabulary, making it easier for you to communicate effortlessly in everyday conversations and professional settings.</p>
+                  <a href="https://youtu.be/wJ-bisyfyRw?si=5md17IGHWhFpI8P2" class="btn btn-primary">watch now</a>
+                </div>
+              </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card" style="width: 24rem;">
+                <img src="{{ url_for('static', filename='images/speak.jpg') }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Speak like Pro</h5>
+                  <p class="card-text">Learn how to structure your speech, engage your audience, and deliver powerful messages with confidence. This course covers voice modulation, storytelling techniques, and strategies to overcome stage fright, helping you speak with clarity and impact in any situation.</p>
+                  <a href="https://youtu.be/7hr60EumwQ4?si=wzP0NbBFwyGqCgaB" class="btn btn-primary">watch now</a>
+                </div>
+              </div>
+        </div>
+        
+    </div>
+</div>
+
+<div class="container mt-2">
+    <h2>Learn Problem Solving</h2>
+    <div class="row mt-3">
+        <div class="col-md-4">
+            <div class="card" style="width: 24rem;">
+                <img src="{{ url_for('static', filename='images/dsa.jpg') }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Master DSA</h5>
+                  <p class="card-text">Master the fundamentals of Data Structures and Algorithms (DSA) to enhance your problem-solving skills. This course covers essential topics like arrays, linked lists, trees, and graphs, helping you build a strong foundation for coding interviews.</p>
+                  <a href="https://youtu.be/RJ733wzbNoA?si=CEQ5B3Nj0y51GduW" class="btn btn-primary">watch now</a>
+                </div>
+              </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card" style="width: 24rem;">
+                <img src="{{ url_for('static', filename='images/let.jpg') }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">LeetCode fresher's Mistakes</h5>
+                  <p class="card-text">don't start leetcode without knowing this,Unlock the secrets to cracking LeetCode problems with this structured guide. Learn problem categorization, pattern recognition, and optimal strategies to boost your confidence and ace coding interviews.</p>
+                  <a href="https://youtu.be/xpIPfrItO_I?si=UTsdiI8WBKrbCN_0" class="btn btn-primary">watch now</a>
+                </div>
+              </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card" style="width: 24rem;">
+                <img src="{{ url_for('static', filename='images/rec.jpg') }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">How to approch</h5>
+                  <p class="card-text">Struggling with DSA? Learn the right problem-solving techniques, step-by-step approaches, and best practices to tackle coding problems efficiently. This guide helps you develop a structured mindset for solving complex challenges.</p>
+                  <a href="https://youtu.be/kHi1DUhp9kM?si=Crp-h4Mc3rWfgzGh" class="btn btn-primary">watch now</a>
+                </div>
+              </div>
+        </div>
+        
+    </div>
+</div>
+
+
+{% endblock %}
